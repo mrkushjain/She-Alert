@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :type_of_harassment %><br />
-    <%= f.text_field :type_of_harassment %>
+    <%= f.collection_select :harassment_id, Harassment.all, :id, :type_of_harassment, {prompt: 'Select Type of Harassment'} %>
   </div>
   <div class="field">
     <%= f.label :description %><br />

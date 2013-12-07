@@ -1,3 +1,4 @@
 class Incident < ActiveRecord::Base
-  attr_accessible :age, :date_of_incident, :description, :location, :type_of_harassment
+  belongs_to :harassment
+  attr_accessible :age, :date_of_incident, :description, :location, :harassment_id
 end

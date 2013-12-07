@@ -11,22 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131207114023) do
+ActiveRecord::Schema.define(:version => 20131207115143) do
 
   create_table "harassments", :force => true do |t|
-    t.string   "type"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "type_of_harassment"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "incidents", :force => true do |t|
     t.string   "location"
     t.datetime "date_of_incident"
-    t.string   "type_of_harassment"
     t.string   "description"
     t.integer  "age"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "harassment_id"
   end
 
 end

@@ -10,7 +10,7 @@
 
 <% @harassments.each do |harassment| %>
   <tr>
-    <td><%= harassment.type %></td>
+    <td><%= harassment.type_of_harassment %></td>
     <td><%= link_to 'Show', harassment %></td>
     <td><%= link_to 'Edit', edit_harassment_path(harassment) %></td>
     <td><%= link_to 'Destroy', harassment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

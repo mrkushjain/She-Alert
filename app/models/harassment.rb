@@ -1,3 +1,4 @@
 class Harassment < ActiveRecord::Base
-  attr_accessible :type
+  has_many :incidents
+  attr_accessible :type_of_harassment
 end
