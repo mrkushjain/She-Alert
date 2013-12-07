@@ -1,4 +1,7 @@
 Shealert::Application.routes.draw do
+  resources :harassments
+
+
   resources :incidents
 
 
