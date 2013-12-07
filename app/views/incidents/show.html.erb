@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Location:</b>
+  <%= @incident.location %>
+</p>
+
+<p>
+  <b>Date of incident:</b>
+  <%= @incident.date_of_incident %>
+</p>
+
+<p>
+  <b>Type of harassment:</b>
+  <%= @incident.type_of_harassment %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @incident.description %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @incident.age %>
+</p>
+
+
+<%= link_to 'Edit', edit_incident_path(@incident) %> |
+<%= link_to 'Back', incidents_path %>

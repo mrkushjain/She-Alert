@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  location: MyString
+  date_of_incident: 2013-12-07 16:52:40
+  type_of_harassment: MyString
+  description: MyString
+  age: 1
+
+two:
+  location: MyString
+  date_of_incident: 2013-12-07 16:52:40
+  type_of_harassment: MyString
+  description: MyString
+  age: 1
