@@ -3,11 +3,17 @@ class IncidentsController < ApplicationController
   # GET /incidents.json
   def index
     @incidents = Incident.all
+    @hash = Gmaps4rails.build_markers(@incidents) do |user, marker|
+      marker.lat user.latitude
+      marker.lng user.longitude
+    end
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @incidents }
     end
+
+
   end
 
   # GET /incidents/1

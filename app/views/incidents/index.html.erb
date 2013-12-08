@@ -1,5 +1,17 @@
 <h1>Listing incidents</h1>
+<div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
 
+<script language="javascript" >
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+        markers = handler.addMarkers(<%=raw @hash.to_json %>)
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+    });
+
+</script>
 <table>
   <tr>
     <th>Location</th>
@@ -12,8 +24,8 @@
     <th></th>
   </tr>
 
-<% @incidents.each do |incident| %>
-  <tr>
+  <% @incidents.each do |incident| %>
+      <tr>
     <td><%= incident.location %></td>
     <td><%= incident.date_of_incident %></td>
     <td><%= incident.harassment.type_of_harassment %></td>
@@ -23,9 +35,8 @@
     <td><%= link_to 'Edit', edit_incident_path(incident) %></td>
     <td><%= link_to 'Destroy', incident, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
-<% end %>
+  <% end %>
 </table>
 
 <br />
-
 <%= link_to 'New Incident', new_incident_path %>

@@ -7,6 +7,11 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'rails_12factor', group: :production
 gem 'bootstrap-datepicker-rails'
+gem 'gmaps4rails'
+gem 'underscore-rails'
+gem 'rails-google-maps'
+gem 'pry'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

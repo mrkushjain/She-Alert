@@ -187,6 +187,13 @@ $(document).ready(function() {
         gmaps_init();
         autocomplete_init();
     };
+
+    if( $('#gmaps-canvas2').length  ) {
+        gmaps_init();
+    };
+
+
+
 });
 
 
