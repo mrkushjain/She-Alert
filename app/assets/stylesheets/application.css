@@ -12,3 +12,8 @@
  *= require_tree .
  *= require bootstrap-datepicker
  */
+.content{
+
+    margin-left:50px;
+    margin-right:20px;
+}
