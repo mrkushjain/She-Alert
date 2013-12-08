@@ -25,7 +25,6 @@ class IncidentsController < ApplicationController
   # GET /incidents/new.json
   def new
     @incident = Incident.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @incident }

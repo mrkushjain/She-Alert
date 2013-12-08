@@ -13,8 +13,16 @@
 
   <div class="field">
     <%= f.label :location %><br />
-    <%= f.text_field :location %>
+    <div id='gmaps-canvas'></div><br />
+
+    <div id='input'>
+      <!--<input id='location' placeholder='Start typing a place name...' type='text' />-->
+      <%= f.text_field :location %>
+      <div id='gmaps-error'></div>
+    </div>
+
   </div>
+
   <div class="field">
     <%= f.label :date_of_incident %><br />
     <%= f.text_field :date_of_incident, {"data-behaviour" => 'datepicker'} %>
@@ -31,6 +39,10 @@
     <%= f.label :age %><br />
     <%= f.number_field :age %>
   </div>
+
+    <%=f.hidden_field :longitude %>
+    <%=f.hidden_field :latitude %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
